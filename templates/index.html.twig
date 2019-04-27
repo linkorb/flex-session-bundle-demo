@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Flex session demo{% endblock %}
+
+{% block body %}
+    <div>
+        Flex session type: {{ flexSessionType }}
+        <a href="/change-flex-session-type/{{ flexSessionType == 'pdo' ? 'file' : 'pdo' }}">Switch to {{ flexSessionType == 'pdo' ? 'file' : 'pdo' }}</a>
+    </div>
+
+    <div>
+        Time from session: {{ time }}
+        <a href="/update">Update</a>
+    </div>
+{% endblock %}
